@@ -12,14 +12,16 @@
 ## Software requirement: hisat2, samtools, bowtie2, R 
 ## Package requirement in R: GenomicRanges, biomaRt, dplyr
 ## Currently only support paired-end RNA-Seq file
+## Genome index should be created with hisat2
+## Repeat index should be created with bowtie2
 input_file_path="/scratch/groups/ashbym/mandy/novogene/raw_data/RbKO2"
 fastq_1="RbKO2_FRRL202355629-1a_H3TG5DSXY_L3_1.fq.gz"
 fastq_2="RbKO2_FRRL202355629-1a_H3TG5DSXY_L3_2.fq.gz"
 out_path="/scratch/groups/ashbym/mandy/novogene/raw_data/RbKO1/pipeline_out"
 hisat2_index_path="/home/groups/ashbym/mandy/hisat2_index/hg19_hisat2"
 out_file_name="RbKO1_hisat.sam"
-repeat_genome="/home/groups/ashbym/mandy/test_repeat_genome/active_rep"
 install_dir="/scratch/groups/ashbym/mandy/novogene/raw_data"
+repeat_genome=$install_dir"/repeatome/active_rep"
 ###################################################################################
 
 mkdir $out_path
